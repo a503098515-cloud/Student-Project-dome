@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-BackedApplication<backed>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.example.backed.BackedApplication",
+            "projectName": "backed",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
