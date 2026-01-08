@@ -16,14 +16,15 @@ public class StudentService {
     public List<Student> getAllStudents() {
         return studentRepository.findAll();
     }
-
-    // Save
-    // Save
+    // Save and Check if the Studen data is not empty
     public Student saveStudent(Student student) {
-        // Check if GPA is valid
+        if (student == null) {
+        throw new IllegalArgumentException("Student cannot be null");
+    }
+        // Check if GPA data is valid
         if (student.getGpa() < 0 || student.getGpa() > 4.0) {
-            throw new RuntimeException("Invalid GPA: GPA must be between 0 and 4.0");
-        }
+    throw new IllegalArgumentException("Invalid GPA: Must be between 0.0 and 4.0");
+}
         return studentRepository.save(student);
     }
     // Get 
